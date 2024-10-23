@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Westyn Hilliard | Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <meta name="description" content="Westyn Hilliard - Data Scientist and Business Enthusiast Portfolio showcasing data-driven projects and expertise.">
+    <meta name="keywords" content="Westyn Hilliard, Data Scientist, Python, Machine Learning, Data Analytics, Portfolio, Finance">
+    <meta name="author" content="Westyn Hilliard">
     <style>
         body {
             font-family: 'Roboto', sans-serif;
@@ -37,6 +40,10 @@
             margin: 0 15px;
             font-size: 1.2em;
         }
+        nav a:hover {
+            text-decoration: underline;
+            color: #f39c12;
+        }
         section {
             padding: 20px;
             max-width: 1000px;
@@ -60,9 +67,17 @@
             width: 48%;
             margin-bottom: 20px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .project-item:hover {
+            transform: scale(1.05);
         }
         .project-item h3 {
             margin-top: 0;
+        }
+        .project-item a {
+            text-decoration: none;
+            color: #f39c12;
         }
         footer {
             background-color: #333;
@@ -77,6 +92,31 @@
         }
         footer a:hover {
             text-decoration: underline;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        input, textarea {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            width: 100%;
+            max-width: 600px;
+        }
+        button {
+            padding: 10px 20px;
+            border: none;
+            background-color: #f39c12;
+            color: white;
+            font-size: 1em;
+            border-radius: 4px;
+            cursor: pointer;
+            max-width: 200px;
+        }
+        button:hover {
+            background-color: #d35400;
         }
         @media (max-width: 768px) {
             .project-item {
@@ -101,22 +141,18 @@
     <!-- About Section -->
     <section id="about" class="intro">
         <h2>About Me</h2>
-        <p>Hello! I'm Westyn Hilliard, a data scientist with a strong passion for solving complex problems through technology. With a Master's in Data Science, I have been able to work on numerous projects specializing in utilizing data to uncover insights and create impactful solutions.
+        <p>Hello! I'm Westyn Hilliard, a data scientist with a strong passion for solving complex problems through technology. With a Master’s in Data Science, I have had the opportunity to work on numerous projects that leverage data to uncover insights and create impactful solutions.</p>
+         
+        <p>I recently graduated with a Master’s degree in Data Science, where I honed my skills in machine learning, data visualization, and predictive analytics. In my career, I’ve been fortunate to work in finance, where I use data science to drive analytical decisions that improve operations and grow the business.</p>
 
-I recently graduated with a Master's degree in Data Science, where I honed my skills in machine learning, data visualization, and predictive analytics. Throughout my career, I’ve been fortunate to work in finance, where I have had the opportunity to use my Data Science knowledge to make analytical decisions to increase operations while increasing business. 
+        <p>What excites me the most about data science is its ability to turn raw data into meaningful stories that influence real-world outcomes. My approach blends creativity with precision, as I strive to balance innovative thinking with a structured mindset to deliver accurate and actionable insights.</p>
 
-What excites me the most about data science is its ability to turn raw data into meaningful stories that influence real-world outcomes. My approach is grounded in both creativity and precision; I strive to balance innovative thinking with an organized mindset to deliver accurate and actionable insights.
+        <p>Outside of my professional life, I’m passionate about continuous learning and applying it in real-world contexts. I love staying current with the latest industry trends, refining my programming skills, and enjoying the outdoors in East Tennessee. You can often find me playing pickleball or spending quality time with my family.</p>
 
-Outside of my professional life, I’m passionate about continued learning and applying it in practical, real-world applications. Whether it’s staying up-to-date with the latest developments or refining my programming skills, I believe in the power of lifelong learning to stay ahead in the ever-evolving tech landscape.
-
-When I’m not diving deep into data, you can find me enjoying the outdoors of East Tennessee, playing pickleball, or spending time with my family. I’m always eager to connect with others, share knowledge, and collaborate on exciting new projects.
-
-If you’re interested in learning more about my work or discussing potential opportunities, feel free to reach out!
-
-</p>
+        <p>If you’d like to connect or discuss potential opportunities, feel free to reach out!</p>
     </section>
 
-    <!-- Projects Section -->
+     <!-- Projects Section -->
     <section id="projects" class="projects">
         <h2>Projects</h2>
         <div class="project-list">
