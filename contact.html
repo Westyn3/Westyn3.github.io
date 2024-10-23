@@ -24,62 +24,41 @@
             overflow: hidden;
         }
 
-        /* Container for form */
+        /* Container for the contact information */
         .container {
             background-color: rgba(0, 0, 0, 0.6); /* Dark grey transparent background */
             padding: 40px;
             border-radius: 10px;
             max-width: 600px;
             width: 100%;
+            text-align: center;
         }
 
         h1 {
             font-family: 'Roboto Mono', monospace; /* Analytical font for the title */
             font-size: 2.2em;
             margin-bottom: 20px;
-            text-align: center;
             letter-spacing: 0.15em;
         }
 
-        /* Style for form fields */
-        form {
-            display: flex;
-            flex-direction: column;
+        /* Styling for the contact information */
+        .contact-info {
+            margin-bottom: 30px;
         }
 
-        label {
-            font-size: 1.1em;
-            margin-bottom: 10px;
-        }
-
-        input, textarea {
-            padding: 10px;
-            margin-bottom: 20px;
-            border: 2px solid white;
-            background-color: rgba(255, 255, 255, 0.1); /* Transparent input fields */
+        .contact-info a {
             color: white;
-            border-radius: 5px;
-            font-size: 1.1em;
-        }
-
-        input::placeholder, textarea::placeholder {
-            color: rgba(255, 255, 255, 0.7);
-        }
-
-        /* Buttons styling */
-        button {
-            padding: 12px 25px;
-            border: none;
-            background-color: transparent;
-            color: white;
+            text-decoration: none;
             border: 2px solid white;
+            padding: 8px 20px;
             border-radius: 8px;
-            font-size: 1.2em;
-            cursor: pointer;
+            font-size: 1em;
+            display: inline-block;
+            margin: 10px 0;
             transition: all 0.3s ease;
         }
 
-        button:hover {
+        .contact-info a:hover {
             background-color: white;
             color: #333;
         }
@@ -122,29 +101,27 @@
 </head>
 <body>
 
-    <!-- Container for the contact form -->
+    <!-- Container for the contact info -->
     <div class="container">
         <h1>Contact Me</h1>
 
-        <!-- Contact form -->
-        <form action="submit_form" method="post">
-            <label for="name">Your Name</label>
-            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+         <!-- Message about connecting -->
+        <p>If you’d like to connect or discuss potential opportunities, feel free to reach out!</p>
 
-            <label for="email">Your Email</label>
-            <input type="email" id="email" name="email" placeholder="Enter your email" required>
-
-            <label for="message">Message</label>
-            <textarea id="message" name="message" placeholder="Write your message" rows="6" required></textarea>
-
-            <button type="submit">Send Message</button>
-        </form>
+        <!-- Contact Information Links -->
+        <div class="contact-info">
+            <a href="mailto:Whilliard3@gmail.com">Email</a>
+            <br>
+            <a href="https://www.linkedin.com/in/westynhilliard/" target="_blank">LinkedIn</a>
+            <br>
+            <a href="https://github.com/Westyn3" target="_blank">GitHub</a>
+        </div>
 
         <!-- Navigation links to other pages -->
         <nav>
             <a href="index.html">Home</a>
             <a href="portfolio.html">Portfolio</a>
-            <a href="experience.html">Experience</a>
+            <a href="experience.html" class="experience">Experience</a>
             <a href="about.html">About</a>
         </nav>
     </div>
