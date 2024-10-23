@@ -41,26 +41,44 @@
             letter-spacing: 0.15em;
         }
 
-        /* Styling for the contact information */
-        .contact-info {
+        p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        /* Contact logos */
+        .logo-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
             margin-bottom: 30px;
         }
 
-        .contact-info a {
-            color: white;
-            text-decoration: none;
-            border: 2px solid white;
-            padding: 8px 20px;
-            border-radius: 8px;
-            font-size: 1em;
+        /* Styling for the logos */
+        .logo-buttons a {
             display: inline-block;
-            margin: 10px 0;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 2px solid white;
+            padding: 10px;
             transition: all 0.3s ease;
         }
 
-        .contact-info a:hover {
+        .logo-buttons a img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        /* Hover effect for the logos */
+        .logo-buttons a:hover {
             background-color: white;
-            color: #333;
+            border-color: white;
+        }
+
+        .logo-buttons a:hover img {
+            filter: invert(1); /* Invert the image colors to match the background */
         }
 
         /* Navigation menu for other links */
@@ -105,16 +123,20 @@
     <div class="container">
         <h1>C O N T A C T</h1>
 
-         <!-- Message about connecting -->
+        <!-- Message about connecting -->
         <p>If you’d like to connect or discuss potential opportunities, feel free to reach out!</p>
 
-        <!-- Contact Information Links -->
-        <div class="contact-info">
-            <a href="mailto:Whilliard3@gmail.com">Email</a>
-            <br>
-            <a href="https://www.linkedin.com/in/westynhilliard/" target="_blank">LinkedIn</a>
-            <br>
-            <a href="https://github.com/Westyn3" target="_blank">GitHub</a>
+        <!-- Contact Logos -->
+        <div class="logo-buttons">
+            <a href="mailto:Whilliard3@gmail.com" title="Email">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAllBMVEX///9gp/////3//v9gqP1ao/1ZpPyw0vCx0+/9//9eqP+UwvOWwvb///v5///2///e8ftYn/J1rOtXoPd0rPBboPHs+f5louyrzfK/3fWaw/Hk9P3M5vdeqfxsrvfw/P9ZnuuIuOtrpu3d7v+iyvOAs+293PWOuuzC4PSt0PN0sfO20vCAs+vT6vicxPRkouvn/P2i0PExPz/yAAAMOUlEQVR4nO1diXbiOhKVywtIRN7NngYcCDCEyfT//9xUySQhIDeGgO2co3vy+kEAR9dVqk0lwZiBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgcEx4PP/UPra7wW3AWy7IAIA9B+BnnH8LScAsxse5Q8AwJGIRA7Eivt+EMxmsyDwfY4vSgk2IP3fLEiO7JTogpfRdvyWDrIkipIoG8SL8XD0EjCGr/9mESrt5JPROJ1HrutaliWsAzx8nszj8WhC2vp7OUKwH6ZZ4gnHQXbCcg786CE9Fl4Spct98LssjrIf+A/OwXCZJu6H1L7kdwI3SZchV+Jm9q/gyokcQDBaRW4JqTOS0WoUAE5aNEzth40UJcw6eYJKWSa3EwjHTfJOAB8us92CJBHOOoOq4jtQxFvhvndm5CYZa7kDAfBfc7ItQlSU4IGiY3n5qy+VXW01QxauIhwvsnMuEzshKZL4penhl4BTQEaRJwTLSInuSnoF8EPRMijMast0FQ7zh+1j7xZqR/DiF5AYz7aLIBoIFWDyTlbVfJZCiKjDJYZzfqso2mRDZbBOfkhP4Tlaz4C3zzkCTGLvpwK0aC6iUY0neMdaFa1idgT79+t8YBlDNKmONwgZb4nPUAks4P2eRncQ4BeiKSaQDFoRqHLKAPkmuStBdI0bZnO0YM1PRq48BRK8JoS5TNAR0QZ1g9xGwwDyFKSijnOTky8BBe3ZVBV2mmZIfgLCSNyVn4r5UIp7VNSmCTLlJt7J/v3Y13+jiFcUYjBpwTRENZr9OFIrRRyoamSjERzambV3Vw39ghDu2idT3azPgE70IIIIx+sAlX2aDG/k/r6e/oShiEJQHqk5hkGMw3iYENHepIEE3hRB+rvLRNyW7VaE4w6bc4qUxYXZA3W0AOopNDQRwQZ/9XCClrVqytKAtOE1ejxBkbyypiYiBPnjjMwR8qAxd7F17xuO6iG8bUMilLNBmQhvm51ld0vMA7XcU3cmxeXOvbEuWopn3a0RltsBsmt1Ow3wc/0dd12PFkCvh4cf1FwQs5ZBoFoC6iXI2CjRauN/Ortut3MD8FO7zh/dTXOSDWsg3edvKis8E2E6uXkkwKbnU5v+iogxvLDr9hkl4Ywj5vvrkx3VgGKzbiSc51OKaK+fo1DyOivEVAOTS2159KmbWNGoKPNXHhHYkuwIxyB3sO/pLusugcs6ZUgNJKl7LkPh9dgos6ItqhS3K7tpm7IHtSiQh/CkVY205nYGHNBes0aBdv2JwXRgJWNfXlHqRHo2zFaeG/eBPWnXBpJ9rc6CbvlQY9gd4T3hy2HueevgiiISvbOfCmcxw0ypp636eMN6GeKgUt04UEsBc6p+7Hjx7Aq1QpV4t5Kej8kuylB75bTe8rcNE311xnuiQrwMFonIw2oMVQ/fJhPRlj6JWqrzQaimE1njTOQ2G+mjD5ShWqD2x4n1PqXRXzCAKDX05N3Myl4Pv3nSL2Elo1qLGcD+qxvHF0Pgw0hEIxTJJdXCiNofRtZ88zHNShh64zqzRJuzVGfwvhjizygSSedSjQVoObvnivfws31PyxDDmpTVlyXioIO5bq4cMZScTeciGWO09U8oLyHi/peASmSIKVR9DDH+CLVR9xdDTk48zF1nEfz7UnKCrmU1A/hcgylhaEUvdbp82GiHQQw/3kHZTj910IlLcuiaa6jAIcxF0gvIAP9TS/HS7qgudoyW1LZap3XEsCAxe0MNnFAz9Pn954CuE3OJaPjdGJXJ0B0+ltQ32GxciSF6jWVkDfbE5Qzk3V/RDXZPVpbKGKIxrROLajKk6C4S2Qg0rSPFa4MpQDUZeovHUjoZXazPDU8YKqNDcuro9lpgVCDyPZwuu5QwpCz4oZy+wx/oR3EqQ6WA04GTLP2za8wWmEtMqGDPq2ipI/74NRpTP6vEkNQURRS+k71kRSMXh2L3TD92KTo/RxlDyzm/S49DUJFhAd6PvQR9HjUcMtXhBzIcWN5aK5RShtG/XetdAbOSGo2eoS0xbvHyibSpRZo2CgHFO0tfmw+VM9RJ/EGAWYSBYmWGSDEYOwK9BgXaFBKh9bF2XB9otoIhu0qG1BDL/+I8yjbIiWbjNrNERo1rumyhHQyvmoc2k34vERmmUzsqq7ExZh2Fq9flVu1g6Ot7gc/8oSStBJU+5JNphnMvgP6b56b96ZzKVZSD2LKKx3eEGNRpS/28EkOb2zZ5i1w8r2YSqEKVrt6F+4bReJhi4jErmqerMLSsvEaGth9XYijVagrJbozJHacuYtqzhl4Co7j+Ch3iBNhpQKdniH8urtHjA19oysEaGaJd4buIiky2WlcJXher3pQXLjFYU4mb6t2VGHqLGqM2YONL+WHxPmD+MqHI26atlvKwxkkdt/TD/6LJeT3dH1zKsM7cArOCixmwGjgEC08MQlmkwDZNOZt0l6vOYuUXMT38PhHL5qFXZ37I2MYtq9McCFL0wuQEg89VH5gueKGIlVMheI1GCL4WOUpkKGrN8YG9aNu6vxhKspGwx5B7EUiuLVerSjAZH++tTx+4UKcRUZ1bomw7mF/QUipQjyIrWR72k2rMoIrfWPDmqr0Hn28oy4DnsxrL+mjgtSnwsZZKn7L7V3wggenrwlwtevIlvm9Dtqj4bRnDuM6SN45Luz56bGkCzOAHU2mz4lSBsitRktwlfwIX6qVurWUaVLvSdYsisafWaIzNQJ0pwMramJXboFZ/qh0rfw7/WLeodWWGQ18Xe6uKMC1XqwDtrXqkjHEdvh0k2ZsShtlEd7DGo0B/S7dwoWRInm46d71x9XkD0MfYnJo4UOIlDFN2aYHgniDPrasJKxmiP99lYr674o5jFIDT1ppPoVSG3rLWpi+S4V6zcuFYbk/ZGBwsu6I7RNWrtmR6Wdk8jPas3vVDm2F6oZGh24PZm+PlYXGuSdXLoWuUbET5Y5kMU7/eRmEqmQ116YXX+x9VCfvqTdfe8v1AROvgyT1d5cbnqKQMat4iBGF2Woyi585AuOvgNnWCPoZwqz8nDY+0J05kIehWBh6M1XlLAZ0z8Ly93aoHa4vOKjgRobDEimuj98cCNL2JtDPh+W/3dvylS55pqUg2Kj+pm+NpscZxCj31qMH0VjjqPIbj69LRNrmvNLRuhtA9sTUf6qVmzg2gfoRif8q361KPMKvXV3wwDN7vuzW2BEIMZs20sgPrPmzj4TFBx9s2tBuBQ6Dv9L43xbzO3PcbJLze5ZiICwSTV1m7jSkAEvy3xzP0Vj7IRuYhBVEy1C/R3BMYzjR6RAYmUeKuu7hPINxlg+wIfvy4HZbimTow/GLpvzFAOLce5hSflY7SwkaDDG3oRo/SUgft6A4OBarGgElN73Euw1ur7fiNnh1JhyfFDzI2jhXPihWeJm0pjWAyQGvzfHeD46hzMRo/S8mmhgr0is59xahyDJXYN03wcALPPrm3nmIile1pCbx5isVdnt57UzdKcKP2hzV+Ag+jxU3OYJPd0yvitWh7gt2KU4aL4wRt2M/VoTl3YKfmdHbDJsaHgtNijCju/k9BNnkQNpNOlAIOC9bOXQgKR3W/N03qG2xOvepBL7p1K/4xRDQOGHX4Nc3qGOQUqZdkdweTKuY7rjqlWiVE2lanlmLCn59fmha7+ngLrOg3HEYF/jZTHJ3rjlsozjTHB9nSl23j9gUqawAL36jaf53JEYqfEMkqbMlpkCVQnVCSj3JPrdFUFqKjOAovH1HHqW6TVFsA6jRvgKDz7mkbwctESH7Ue98GqmkYGjtwpwLI3JAkZbBTZ7JXR5J3Aym5tIs4sGkiJTjcea72qvmbKufqK+lZXrba+J8hLmtBtH0ZpGc8XMb03QjFVz84n+uCzmdsp37pRekybLFxKQHtOaAJuR+mUUKHJBzPSvp2C0cdS+8mWTrc++0KX6pBhSTF+buTzTKeJ3S+jnJ4BVN6GhXfUVIcHyRbFodeBOWuqvO5+GqgINxsx4s4z7IoyrJBHi+Ww02ovmfGpmiPem9+mRxt5Ru56nxmH401/PBdQb76rqBiIzs1f9uMfhod7/VQdVz6pidefMvTtzD6aI++8i7q0W9jaGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgcCP+D7/ir3TJ6L2YAAAAAElFTkSuQmCC" alt="Email Logo">
+            </a>
+            <a href="https://www.linkedin.com/in/westynhilliard/" target="_blank" title="LinkedIn">
+                <img src="data:image/png;base64,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" alt="LinkedIn Logo">
+            </a>
+            <a href="https://github.com/Westyn3" target="_blank" title="GitHub">
+                <img src="data:image/png;base64,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" alt="GitHub Logo">
+            </a>
         </div>
 
         <!-- Navigation links to other pages -->
