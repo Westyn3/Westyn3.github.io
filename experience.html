@@ -25,14 +25,14 @@
 
         h1 {
             font-family: 'Roboto Mono', monospace;
-            font-size: 2.2em; /* Slightly smaller */
+            font-size: 2.5em;
             margin-bottom: 40px;
             letter-spacing: 0.1em;
         }
 
         h2 {
             font-family: 'Roboto Mono', monospace;
-            font-size: 1.8em; /* Lowered the size */
+            font-size: 1.8em;
             margin-top: 40px;
         }
 
@@ -45,11 +45,11 @@
             text-align: left;
             max-width: 800px;
             margin: 30px auto;
-            min-height: 250px; /* Set a minimum height to ensure all boxes are the same size */
+            min-height: 250px;
         }
 
         .section h3 {
-            font-size: 1.6em; /* Lowered the size */
+            font-size: 1.6em;
             margin-bottom: 10px;
         }
 
@@ -59,7 +59,7 @@
         }
 
         .section ul li {
-            font-size: 1.1em; /* Lowered the size */
+            font-size: 1.1em;
             margin-bottom: 10px;
             line-height: 1.6;
         }
@@ -70,6 +70,7 @@
             display: flex;
             justify-content: center;
             gap: 20px;
+            flex-wrap: wrap; /* Allows buttons to wrap on smaller screens */
         }
 
         nav a {
@@ -88,7 +89,7 @@
 
         /* Footer */
         footer {
-            margin-top: auto; /* Pushes the footer to the bottom */
+            margin-top: auto;
             padding: 10px 0;
             width: 100%;
             text-align: center;
@@ -96,6 +97,56 @@
             color: rgba(255, 255, 255, 0.5);
         }
 
+        /* Media queries for mobile responsiveness */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em; /* Reduce font size for mobile */
+            }
+
+            h2 {
+                font-size: 1.6em; /* Adjust section header size */
+            }
+
+            .section h3 {
+                font-size: 1.4em; /* Adjust subheading size */
+            }
+
+            .section ul li {
+                font-size: 1em; /* Adjust paragraph size */
+            }
+
+            nav a {
+                padding: 8px 16px; /* Smaller buttons */
+                font-size: 0.9em; /* Adjust font size for buttons */
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.6em; /* Further reduce the heading size for smaller phones */
+            }
+
+            h2 {
+                font-size: 1.4em; /* Adjust section header size further */
+            }
+
+            .section h3 {
+                font-size: 1.2em; /* Adjust subheading size further */
+            }
+
+            .section ul li {
+                font-size: 0.9em; /* Further adjust paragraph size */
+            }
+
+            nav a {
+                padding: 6px 14px; /* Further reduce padding for smaller buttons */
+                font-size: 0.85em; /* Smaller font for buttons */
+            }
+
+            footer {
+                font-size: 0.65em; /* Smaller footer text */
+            }
+        }
     </style>
 </head>
 <body>
@@ -111,8 +162,7 @@
             <li>SQL</li>
             <li>Data Visualization (Power BI, Tableau)</li>
             <li>Machine Learning (Regression, Classification, Clustering)</li>
-            <li>Time Series Forecasting</li>
-            <li>Statistical Analysis (Hypothesis Testing, ANOVA)</li>
+            <li>Statistical Analysis (Hypothesis Testing)</li>
             <li>Predictive Modeling</li>
             <li>Data Cleaning and Preprocessing</li>
         </ul>
