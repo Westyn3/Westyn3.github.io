@@ -86,7 +86,7 @@
             stroke-opacity: 0.5; /* Transparent white */
         }
 
-        /* White straight lines */
+        /* White crooked straight lines */
         .straight-line {
             fill: none;
             stroke: white;
@@ -122,22 +122,22 @@
         </nav>
     </div>
 
-    <!-- SVG Curvy, Zig-Zag, and Straight Lines -->
+    <!-- SVG Curvy, Zig-Zag, and Crooked Lines -->
     <svg>
-        <!-- Curvy zig-zag white lines -->
-        <path class="curvy-line" d="M50,150 C100,100 150,200 200,150 250,100 300,150 350,100" />
-        <path class="curvy-line" d="M400,300 C450,250 500,350 550,300 600,250 650,300 700,250" />
-        <path class="curvy-line" d="M200,400 C250,350 300,450 350,400 400,350 450,400 500,350" />
+        <!-- Curvy zig-zag white lines, rotated and randomized -->
+        <path class="curvy-line" d="M50,150 C100,100 150,200 200,150 250,100 300,150 350,100" transform="rotate(10 200 150)" />
+        <path class="curvy-line" d="M400,300 C450,250 500,350 550,300 600,250 650,300 700,250" transform="rotate(-8 550 300)" />
+        <path class="curvy-line" d="M200,400 C250,350 300,450 350,400 400,350 450,400 500,350" transform="rotate(12 350 400)" />
 
-        <!-- Zigzag lines -->
-        <path class="zigzag-line" d="M100,500 L150,450 L200,500 L250,450 L300,500" />
-        <path class="zigzag-line" d="M500,600 L550,550 L600,600 L650,550 L700,600" />
+        <!-- Zigzag lines, rotated -->
+        <path class="zigzag-line" d="M100,500 L150,450 L200,500 L250,450 L300,500" transform="rotate(5 200 500)" />
+        <path class="zigzag-line" d="M500,600 L550,550 L600,600 L650,550 L700,600" transform="rotate(-7 600 600)" />
 
-        <!-- Crooked short straight white lines -->
-        <line class="straight-line" x1="100" y1="100" x2="100" y2="250" transform="rotate(5 100 100)" />
-        <line class="straight-line" x1="300" y1="200" x2="300" y2="350" transform="rotate(-10 300 200)" />
-        <line class="straight-line" x1="500" y1="300" x2="500" y2="450" transform="rotate(7 500 300)" />
-        <line class="straight-line" x1="700" y1="100" x2="700" y2="250" transform="rotate(-15 700 100)" />
+        <!-- Crooked short straight white lines, with more lines toward the right side -->
+        <line class="straight-line" x1="100" y1="100" x2="100" y2="250" transform="rotate(15 100 100)" />
+        <line class="straight-line" x1="400" y1="200" x2="400" y2="350" transform="rotate(-12 400 200)" />
+        <line class="straight-line" x1="600" y1="300" x2="600" y2="450" transform="rotate(20 600 300)" />
+        <line class="straight-line" x1="800" y1="100" x2="800" y2="250" transform="rotate(-18 800 100)" />
         <line class="straight-line" x1="900" y1="150" x2="900" y2="300" transform="rotate(12 900 150)" />
     </svg>
 
