@@ -40,29 +40,35 @@
             flex-wrap: wrap;
         }
 
+        /* Transparent buttons with white border */
         nav a {
             padding: 12px 25px;
             text-decoration: none;
-            background-color: #28a745; /* Updated button color */
-            color: white;
+            background-color: transparent; /* Make buttons transparent */
+            color: white; /* White text */
+            border: 2px solid white; /* White border */
             border-radius: 8px;
             font-size: 1.2em;
-            transition: background-color 0.3s ease;
+            transition: all 0.3s ease; /* Smooth transition for hover */
         }
 
+        /* Hover effect: Fill with white and change text color */
         nav a:hover {
-            background-color: #218838; /* Darker hover effect */
+            background-color: white;
+            color: #333; /* Dark text on hover */
         }
 
-        /* Button styling for the new "Experience" button */
+        /* Button styling for the new "Experience" button (transparent with white border) */
         .experience {
-            background-color: #ffcc00;
-            color: black;
+            border: 2px solid white; /* Same as other buttons for consistency */
         }
 
+        /* Experience button hover */
         .experience:hover {
-            background-color: #e6b800; /* Hover effect for the "Experience" button */
+            background-color: white;
+            color: #333;
         }
+
     </style>
 </head>
 <body>
