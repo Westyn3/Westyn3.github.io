@@ -124,21 +124,23 @@
 
     <!-- SVG Curvy, Zig-Zag, and Crooked Lines -->
     <svg>
-        <!-- Curvy zig-zag white lines, rotated and placed on the right -->
-        <path class="curvy-line" d="M800,150 C850,100 900,200 950,150 1000,100 1050,150 1100,100" transform="rotate(10 900 150)" />
-        <path class="curvy-line" d="M900,300 C950,250 1000,350 1050,300 1100,250 1150,300 1200,250" transform="rotate(-8 1050 300)" />
-        <path class="curvy-line" d="M950,400 C1000,350 1050,450 1100,400 1150,350 1200,400 1250,350" transform="rotate(12 1100 400)" />
+        <!-- Curvy lines on the left side -->
+        <path class="curvy-line" d="M50,100 C100,50 150,150 200,100 250,50 300,100 350,50" transform="rotate(5 150 100)" />
+        <path class="curvy-line" d="M100,300 C150,250 200,350 250,300 300,250 350,300 400,250" transform="rotate(-8 250 300)" />
 
-        <!-- Zigzag lines, rotated and on the right -->
-        <path class="zigzag-line" d="M800,500 L850,450 L900,500 L950,450 L1000,500" transform="rotate(5 900 500)" />
-        <path class="zigzag-line" d="M1000,600 L1050,550 L1100,600 L1150,550 L1200,600" transform="rotate(-7 1100 600)" />
+        <!-- Curvy lines on the right side -->
+        <path class="curvy-line" d="M850,400 C900,350 950,450 1000,400 1050,350 1100,400 1150,350" transform="rotate(12 1000 400)" />
 
-        <!-- Crooked short straight white lines on the right side -->
-        <line class="straight-line" x1="850" y1="100" x2="850" y2="250" transform="rotate(15 850 100)" />
-        <line class="straight-line" x1="1000" y1="200" x2="1000" y2="350" transform="rotate(-12 1000 200)" />
+        <!-- Zigzag lines on both sides, not interfering with the text -->
+        <path class="zigzag-line" d="M100,500 L150,450 L200,500 L250,450 L300,500" transform="rotate(7 200 500)" />
+        <path class="zigzag-line" d="M950,600 L1000,550 L1050,600 L1100,550 L1150,600" transform="rotate(-7 1050 600)" />
+
+        <!-- Crooked short straight white lines on both sides -->
+        <line class="straight-line" x1="100" y1="150" x2="100" y2="250" transform="rotate(10 100 150)" />
+        <line class="straight-line" x1="400" y1="250" x2="400" y2="350" transform="rotate(-15 400 250)" />
+
+        <line class="straight-line" x1="850" y1="200" x2="850" y2="300" transform="rotate(15 850 200)" />
         <line class="straight-line" x1="1100" y1="300" x2="1100" y2="450" transform="rotate(20 1100 300)" />
-        <line class="straight-line" x1="1200" y1="100" x2="1200" y2="250" transform="rotate(-18 1200 100)" />
-        <line class="straight-line" x1="1300" y1="150" x2="1300" y2="300" transform="rotate(12 1300 150)" />
     </svg>
 
     <!-- Footer for copyright text -->
