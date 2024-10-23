@@ -60,7 +60,7 @@
             color: #333; /* Dark text on hover */
         }
 
-        /* SVG Lines */
+        /* SVG for lines */
         svg {
             position: absolute;
             top: 0;
@@ -70,35 +70,20 @@
             z-index: -1; /* Behind content */
         }
 
-        /* Curvy and zig-zag lines */
+        /* White curvy and zig-zag lines */
         .curvy-line {
             fill: none;
-            stroke-width: 1; /* Half the size */
-            stroke-opacity: 0.7;
+            stroke: white;
+            stroke-width: 1; /* Smaller lines */
+            stroke-opacity: 0.3; /* Transparent white */
         }
 
-        .line1 {
-            stroke: #42f5b0;
-        }
-
-        .line2 {
-            stroke: #f5a742;
-        }
-
-        .line3 {
-            stroke: #4287f5;
-        }
-
-        .line4 {
-            stroke: #f54291;
-        }
-
-        /* Straight lines */
+        /* White straight lines */
         .straight-line {
             fill: none;
             stroke: white;
-            stroke-width: 1; /* Half the size */
-            stroke-opacity: 0.5;
+            stroke-width: 1; /* Thinner lines */
+            stroke-opacity: 0.3; /* Transparent white */
         }
 
         /* Footer copyright text */
@@ -131,18 +116,17 @@
 
     <!-- SVG Curvy and Straight Lines -->
     <svg>
-        <!-- Randomly placed curvy and zig-zag lines, each smaller and spaced apart -->
-        <path class="curvy-line line1" d="M50,100 C150,50 200,200 300,150 400,50 500,150 600,100" />
-        <path class="curvy-line line2" d="M300,250 C350,300 450,150 550,300 650,200 750,250 850,200" />
-        <path class="curvy-line line3" d="M200,400 C250,450 300,350 400,450 500,350 600,450 700,400" />
-        <path class="curvy-line line4" d="M600,450 C650,400 700,500 800,400 900,350 1000,450 1100,400" />
+        <!-- Curvy zig-zag white lines -->
+        <path class="curvy-line" d="M50,150 C100,100 150,200 200,150 250,100 300,150 350,100" />
+        <path class="curvy-line" d="M400,300 C450,250 500,350 550,300 600,250 650,300 700,250" />
+        <path class="curvy-line" d="M200,400 C250,350 300,450 350,400 400,350 450,400 500,350" />
 
-        <!-- Randomized straight lines, not strictly vertical or horizontal -->
-        <line class="straight-line" x1="100" y1="0" x2="150" y2="800" />
-        <line class="straight-line" x1="400" y1="50" x2="450" y2="900" />
-        <line class="straight-line" x1="300" y1="0" x2="500" y2="900" />
-        <line class="straight-line" x1="600" y1="100" x2="700" y2="800" />
-        <line class="straight-line" x1="850" y1="0" x2="900" y2="850" />
+        <!-- Short, randomly placed straight white lines -->
+        <line class="straight-line" x1="100" y1="100" x2="100" y2="250" />
+        <line class="straight-line" x1="300" y1="200" x2="300" y2="350" />
+        <line class="straight-line" x1="500" y1="300" x2="500" y2="450" />
+        <line class="straight-line" x1="700" y1="100" x2="700" y2="250" />
+        <line class="straight-line" x1="900" y1="150" x2="900" y2="300" />
     </svg>
 
     <!-- Footer for copyright text -->
