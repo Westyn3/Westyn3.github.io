@@ -60,62 +60,55 @@
             color: #333; /* Dark text on hover */
         }
 
-        /* Button styling for the new "Experience" button (transparent with white border) */
-        .experience {
-            border: 2px solid white; /* Same as other buttons for consistency */
-        }
-
-        /* Experience button hover */
-        .experience:hover {
-            background-color: white;
-            color: #333;
-        }
-
-        /* Analytical lines */
-        .line {
+        /* SVG Lines */
+        svg {
             position: absolute;
-            width: 300px;
-            height: 2px;
-            background-color: rgba(255, 255, 255, 0.2); /* White with transparency */
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1; /* Behind content */
         }
 
-        /* Positioning and rotating the lines */
+        /* Curvy lines */
+        .curvy-line {
+            fill: none;
+            stroke-width: 2;
+            stroke-opacity: 0.7;
+        }
+
         .line1 {
-            top: 10%;
-            left: 0;
-            transform: rotate(30deg);
+            stroke: #42f5b0;
         }
 
         .line2 {
-            bottom: 20%;
-            right: 0;
-            transform: rotate(-30deg);
+            stroke: #f5a742;
         }
 
         .line3 {
-            top: 60%;
-            left: 20%;
-            transform: rotate(60deg);
+            stroke: #4287f5;
         }
 
         .line4 {
-            bottom: 30%;
-            right: 20%;
-            transform: rotate(-60deg);
+            stroke: #f54291;
         }
 
-        /* Add a fade-in animation for the lines */
-        .line {
-            animation: fadeIn 2s ease-in-out;
+        /* Straight lines */
+        .straight-line {
+            fill: none;
+            stroke: white;
+            stroke-width: 2;
+            stroke-opacity: 0.5;
         }
 
-        @keyframes fadeIn {
-            0% {
-                opacity: 0;
-            }
-            100% {
-                opacity: 1;
-            }
+        /* Footer copyright text */
+        footer {
+            position: absolute;
+            bottom: 10px;
+            width: 100%;
+            text-align: center;
+            font-size: 0.75em;
+            color: rgba(255, 255, 255, 0.5); /* White but slightly transparent */
         }
 
     </style>
@@ -136,17 +129,27 @@
         </nav>
     </div>
 
-  <!-- Analytical lines to create a data science feel -->
-    <div class="line line1"></div>
-    <div class="line line2"></div>
-    <div class="line line3"></div>
-    <div class="line line4"></div>
-    <div class="line line5"></div>
-    <div class="line line6"></div>
-    <div class="line line7"></div>
-    <div class="line line8"></div>
-    <div class="line line9"></div>
-    <div class="line line10"></div>
+    <!-- SVG Curvy and Straight Lines -->
+    <svg>
+        <!-- Curvy Lines, repositioned so they don't overlap -->
+        <path class="curvy-line line1" d="M0,100 C150,50 350,200 500,100 650,50 800,150 1000,50" />
+        <path class="curvy-line line2" d="M0,250 C200,300 400,150 600,300 800,250 1000,350 1200,300" />
+        <path class="curvy-line line3" d="M0,350 C100,400 300,200 450,350 600,250 750,450 1000,300" />
+        <path class="curvy-line line4" d="M0,450 C150,400 300,450 500,400 700,350 900,500 1100,450" />
+
+        <!-- Straight Lines for data-viz feel -->
+        <line class="straight-line" x1="50" y1="0" x2="50" y2="1000" />
+        <line class="straight-line" x1="150" y1="0" x2="150" y2="1000" />
+        <line class="straight-line" x1="300" y1="0" x2="300" y2="1000" />
+        <line class="straight-line" x1="450" y1="0" x2="450" y2="1000" />
+        <line class="straight-line" x1="600" y1="0" x2="600" y2="1000" />
+        <line class="straight-line" x1="800" y1="0" x2="800" y2="1000" />
+    </svg>
+
+    <!-- Footer for copyright text -->
+    <footer>
+        © Westyn Hilliard
+    </footer>
 
 </body>
 </html>
