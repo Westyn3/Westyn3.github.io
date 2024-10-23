@@ -52,8 +52,8 @@
         p::after {
             content: '';
             display: block;
-            width: 300px; /* Width of the line under the title */
-            height: 1px;
+            width: 200px; /* Make the line under the title same size as the one under the name */
+            height: 2px;
             background-color: white;
             margin: 15px auto 0; /* Space between title and the line */
         }
@@ -66,13 +66,13 @@
             flex-wrap: wrap;
         }
 
-        /* Transparent buttons with white border */
+        /* Transparent buttons with slightly more transparent white border */
         nav a {
             padding: 12px 25px;
             text-decoration: none;
             background-color: transparent; /* Make buttons transparent */
             color: white; /* White text */
-            border: 2px solid white; /* White border */
+            border: 2px solid rgba(255, 255, 255, 0.7); /* More transparent white border */
             border-radius: 8px;
             font-size: 1em; /* Slightly smaller font size for buttons */
             transition: all 0.3s ease; /* Smooth transition for hover */
