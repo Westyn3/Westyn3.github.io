@@ -24,7 +24,7 @@
         }
 
         h1 {
-            font-family: 'Roboto Mono', monospace; /* Analytical font for the title */
+            font-family: 'Roboto Mono', monospace;
             font-size: 2.5em;
             margin-bottom: 40px;
             letter-spacing: 0.1em;
@@ -67,12 +67,13 @@
             color: #333;
         }
 
-        /* Styling for navigation buttons */
+        /* Navigation buttons styling */
         nav {
             margin-top: 40px;
             display: flex;
             justify-content: center;
             gap: 20px;
+            flex-wrap: wrap; /* Allows buttons to wrap on smaller screens */
         }
 
         nav a {
@@ -91,7 +92,7 @@
 
         /* Footer styling */
         footer {
-            margin-top: auto; /* Pushes the footer to the bottom */
+            margin-top: auto;
             padding: 10px 0;
             width: 100%;
             text-align: center;
@@ -99,6 +100,48 @@
             color: rgba(255, 255, 255, 0.5);
         }
 
+        /* Media queries for mobile responsiveness */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em; /* Reduce font size for mobile */
+            }
+
+            .portfolio-item h2 {
+                font-size: 1.6em; /* Adjust heading size */
+            }
+
+            .portfolio-item p {
+                font-size: 1.1em; /* Adjust paragraph size */
+            }
+
+            nav a {
+                padding: 8px 16px; /* Smaller buttons */
+                font-size: 0.9em; /* Adjust font size for buttons */
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.6em; /* Further reduce the heading size for smaller phones */
+            }
+
+            .portfolio-item h2 {
+                font-size: 1.4em; /* Adjust heading size further */
+            }
+
+            .portfolio-item p {
+                font-size: 1em; /* Further adjust paragraph size */
+            }
+
+            nav a {
+                padding: 6px 14px; /* Further reduce padding for smaller buttons */
+                font-size: 0.85em; /* Smaller font for buttons */
+            }
+
+            footer {
+                font-size: 0.65em; /* Smaller footer text */
+            }
+        }
     </style>
 </head>
 <body>
